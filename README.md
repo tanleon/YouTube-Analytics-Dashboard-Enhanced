@@ -1,7 +1,7 @@
 
 # YouTube Analytics Dashboard
 
-A **full-stack YouTube Analytics Dashboard** built with **Next.js, TypeScript, PHP, MySQL, jQuery, and AJAX**.
+A **full-stack YouTube Analytics Dashboard** built with **Next.js, TypeScript, PHP, MySQL, jQuery, AJAX, and YouTube Data API v3**.
 This dashboard allows users to import YouTube videos, view live statistics, and continuously update metrics on hover — showcasing both **modern React frontend** and **classic jQuery skills**.
 
 
