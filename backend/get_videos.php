@@ -1,30 +1,40 @@
 <?php
-header("Access-Control-Allow-Origin: *");
+// get_videos.php - FIXED VERSION
+require_once "db.php";
+
+// CORS headers
+header("Access-Control-Allow-Origin: http://localhost:3000");
+header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
+header("Access-Control-Allow-Headers: Content-Type");
+header("Access-Control-Allow-Credentials: true");
 header("Content-Type: application/json");
 
-$servername = "localhost";
-$username = "root";   // your MySQL username
-$password = "";       // your MySQL password
-$dbname = "youtube_dashboard";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-if ($conn->connect_error) {
-    die(json_encode(["error" => "Connection failed: " . $conn->connect_error]));
+// Handle preflight OPTIONS request
+if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
+    exit;
 }
 
-$sql = "SELECT * FROM youtube_videos ORDER BY created_at DESC";
-$result = $conn->query($sql);
+try {
+    // Fetch videos
+    $stmt = $pdo->query("
+        SELECT video_id, title, views, likes, comments
+        FROM youtube_videos
+        ORDER BY created_at DESC
+    ");
 
-$videos = [];
-
-if ($result->num_rows > 0) {
-    while($row = $result->fetch_assoc()) {
-        $videos[] = $row;
+    $videos = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    
+    // Ensure we always return an array
+    if (!$videos) {
+        $videos = [];
     }
+    
+    // Send JSON response - JUST the array, no wrapper
+    echo json_encode($videos);
+    
+} catch (PDOException $e) {
+    error_log("Database error in get_videos.php: " . $e->getMessage());
+    http_response_code(500);
+    echo json_encode(["error" => "Database error: " . $e->getMessage()]);
 }
-
-echo json_encode($videos);
-
-$conn->close();
 ?>
