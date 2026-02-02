@@ -74,7 +74,7 @@ if (!$videoId || !preg_match("/^[a-zA-Z0-9_-]{11}$/", $videoId)) {
 }
 
 // ⚠️ Move this to env file in real apps
-$API_KEY = "AIzaSyArzaTpSmaSDG0bhpDZVyilDE-YxHMGo8k";
+$API_KEY = "";
 
 // Fetch from YouTube API
 $url = "https://www.googleapis.com/youtube/v3/videos"
