@@ -1,6 +1,6 @@
 # YouTube Analytics Dashboard
 
-A small full‑stack project that imports YouTube videos and shows basic analytics (title, views, likes, comments). Built as a learning project to explore modern frontend tooling (Next.js + TypeScript) while integrating legacy-style AJAX (jQuery) and a PHP/MySQL backend.
+A small full‑stack project that imports YouTube videos and shows basic analytics (title, views, likes, comments). Built as a learning project to explore modern frontend tooling (Next.js + TypeScript) while integrating AJAX (jQuery) and a PHP/MySQL backend.
 
 ---
 
@@ -119,3 +119,4 @@ If you'd like, I can:
 - Add a short "Security checklist" file to the repo,
 - Generate a simple CONTRIBUTING.md with development conventions,
 - Or create a troubleshooting page that captures common session/CSRF issues and how to inspect them in DevTools.
+
