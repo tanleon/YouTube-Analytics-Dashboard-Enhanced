@@ -29,6 +29,12 @@ I used this project as a hands‑on sandbox to learn and practice:
 - Delete videos (secure, CSRF‑protected).
 - Nicely formatted numbers and responsive layout.
 
+<img width="1919" height="860" alt="Screenshot_7" src="https://github.com/user-attachments/assets/a5c65837-e0f9-4a4c-ba67-4d58d597cb60" />
+
+<img width="1919" height="899" alt="Screenshot_6" src="https://github.com/user-attachments/assets/a64f1bc8-e72f-4a7c-bb79-cb76b397c993" />
+
+<img width="1919" height="909" alt="Screenshot_8" src="https://github.com/user-attachments/assets/9e0e8544-a19a-440c-8215-fb8a58735569" />
+
 ---
 
 ## How I used this project to learn (key concepts)
@@ -119,4 +125,5 @@ If you'd like, I can:
 - Add a short "Security checklist" file to the repo,
 - Generate a simple CONTRIBUTING.md with development conventions,
 - Or create a troubleshooting page that captures common session/CSRF issues and how to inspect them in DevTools.
+
 
